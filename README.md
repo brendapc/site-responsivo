@@ -1,1 +1,1 @@
-Desenvolvimento de um site responsivo usando <h2>Jquery<h2> e <h2>bootstrap<h2>
+Desenvolvimento de um site responsivo usando <b>Jquery<b> e <b>bootstrap<b>
