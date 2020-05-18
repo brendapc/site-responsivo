@@ -1,0 +1,203 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 60px;
+	background: #000;
+}
+
+/* HEADER */
+.logo{ 
+	width: 10%;
+	height: 100%;
+	float: left; 
+	display: flex;
+	align-items: center;
+}
+.logo img{ 
+	height: 90%; 
+}
+.menu{
+	width: 90%; 
+	height: 100%; 
+	float: right;
+}
+.menu ul{
+	height: 100%; 
+	display: flex; /*responsividade */
+	flex-direction: row; /*horizontal*/
+	list-style: none; 
+	justify-content: flex-end; /*vir para o final*/
+}
+.menu ul li{
+	padding: 20px; 
+	cursor: pointer;
+}
+.menu ul li:hover{ 
+	border-bottom: 3px solid #FFF;
+}
+.menu ul li a{
+	color: #FFF; 
+	height: 100%;
+}
+.menu ul li a:hover{
+	color: #e5dcdc;
+}
+.container-background{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFF;
+	background-color: rgba(0, 0, 0, .75); /*transparencia preta*/
+	background-blend-mode: multiply; /*junta a transparencia preta com a img de background deixando LINDO*/
+	height: 500px;
+	width: 100%;
+	background-size: cover;
+	background-image: url(../imgs/background.jpg);
+}
+.container-background div{
+	width: 80%;
+	text-align: center;
+}
+.container-background div h1{
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Teko', sans-serif;
+	font-size: 8em;
+}
+
+.container-background div a{
+	transition: all .5s ease;
+	color: #FFF;
+	background: lightseagreen;
+	padding: 12px 40px;
+	border: 0.5px groove #FFF; /* groove linha bonitinha ao redor do botão*/
+}
+.container-background div a:hover{
+	left: 0;
+	top: 0;
+	background: rgb(115, 184, 226) ;
+} 
+/*CONTENT*/
+.wrap{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+.content{
+	width: 90%;
+	height: 100%;
+	padding: 50px 0px;
+}
+.content h2{
+	text-align: center;
+	font-size: 3em;
+	font-family: 'Teko' ,'Roboto', 'sans-serif';
+}
+.cards{
+	display: flex; /*flexbox*/
+	justify-content: center;
+	flex-direction: row;
+}
+.card-shadow{
+	margin: 0 10px; /*0 em cima e em baixo e 10 dos lados*/
+	width: 30%;
+	padding: 30px;
+	text-align: center;
+	min-height: 250px;
+	height: 250px;
+	box-shadow: 2px 4px 4px 2px rgba(0,0,0,0.4);
+}
+.card-shadow img{
+	width: 128px;
+}
+
+/*Parallax*/
+.parallax{
+	height: 200px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	background-image: url('../imgs/code.jpg');
+	background-size: cover;
+	background-color: rgba(0, 0, 0, .35);
+	background-blend-mode: multiply;
+ 	background-attachment: fixed;/*efeito show*/
+}
+.parallax span{
+	font-size: 4em;
+	color: #FFF;
+}
+/*PORTIFOLIO*/
+.portifolios, .img-row-1{
+	width: 100%;
+}
+.portifolios div figure{
+	width: 33.3%; /*100% diidido entre as 3 imagens*/
+	height: 300px;
+	overflow: hidden; /*oculta o que ficar fora da div*/
+}
+.portifolios div figure:hover img{
+	-webkit-transform: rotate(0) scale(1);
+	transform: rotate(0) scale(1);
+
+}
+.portifolios div img{
+	height: 300px;
+	width: 100%;
+	-webkit-transform: rotate(15deg) scale(1.4);
+	transform: rotate(15deg) scale(1.4);
+	-webkit-transition:.3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.portifolios div{
+	display: flex;
+	flex-direction: row;
+}
+footer{
+	width:  100%;
+	background: #000;
+	color: #FFF;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	display: flex;
+
+}
+/*AGORA ENTRA A RESPONSIVIDADE*/
+/*MEDIA QUERIES*/
+@media screen and (max-width: 734px){
+	.cards{
+		flex-wrap: wrap;
+	}
+	.cards div {
+		width: 90%;
+		margin: 5px 0;
+	}
+	.parallax span{
+		text-align: center;
+	}
+	.portifolios div{
+		flex-wrap: wrap; /*quando for quebrar quebra em blocos*/
+		display: flex;
+		justify-content: center;
+	}
+	.portifolios div figure{
+		width: 90%;
+		justify-content: center;
+	}
+}
