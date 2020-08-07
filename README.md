@@ -1,3 +1,3 @@
-Desenvolvimento de um site responsivo usando <b>jQuery</b> 
+Desenvolvimento de um site responsivo 
 
 https://brendapc.github.io/site-starwars/
